@@ -1,35 +1,5 @@
-INTRODUCTION
-Throughout your career in software design and development, you will be asked to create applications with various features and functionality based on business requirements. For this assessment, you will create a Java desktop application using the solution statements provided in the requirements section of this assessment.
-
-
-
-The skills you showcase in your completed application will be useful in responding to technical interview questions for future employment. This application may also be added to your portfolio to show to future employers.
-
-
-
-The preferred integrated development environment (IDE) for this assignment is NetBeans version 11.1 or later or IntelliJ IDEA (Community Edition). Use the links in the web links section of this assessment to install one of these IDEs. If you choose to use another IDE, you must export your project into NetBeans 11.1 or later or IntelliJ IDEA format or your submission will be returned.
-
-
-
-This assessment also requires the following software: the latest long term support (LTS) version of JDK and JavaFX SDK or Module (for NetBeans or IntelliJ IDEA), and Scene Builder, which are also available for download in the web links section of this assessment, as well as a video demonstration of the completed application.
-
-
-
-Your submission should include a zip file with all the necessary code files to compile, support, and run your application. Your submission should also include a folder with descriptive Javadoc comments in the .java files. The zip file submission must keep the project file and folder structure intact for the IDE.
-
-
-
-In NetBeans, zip your file by going to File > Export Project > To ZIP and click Export. In IntelliJ IDEA, go to File > Export to Zip File and click OK. If you try to zip your project files with an external program, it will include the build files and make the zip files too large for submission.
-
-
-
-Note: You may receive an error message upon submitting your files because the automated plagiarism detectors will not be able to access the zipped file, but the evaluation team members will run their checks manually when evaluating your submission. 
-
-SCENARIO
-You are working for a small manufacturing organization that has outgrown its current inventory system. Members of the organization have been using a spreadsheet program to manually enter inventory additions, deletions, and other data from a paper-based system but would now like you to develop a more sophisticated inventory program.
-
-You have been provided with a mock-up of the user interface to use in the design and development of the system (see the attached “Software 1 GUI Mock-Up”) and a class diagram to assist you in your work (see the attached “UML Class Diagram”). The organization also has specific business requirements that must be considered for the application. A systems analyst created the solution statements outlined in the requirements section of this task based on the business requirements. You will use these solution statements to develop your application.
-REQUIREMENTS
+# Software I Project – C482
+### REQUIREMENTS
 Your submission must be your original work. No more than a combined total of 30% of the submission and no more than a 10% match to any one individual source can be directly quoted or closely paraphrased from sources, even if cited correctly. The originality report that is provided when you submit your task can be used as a guide.
 
 
@@ -42,9 +12,9 @@ Tasks may not be submitted as cloud links, such as links to Google Docs, Google 
 
 
 
-I.  User Interface
+**I.  User Interface**
 
-A.  Create a JavaFX application with a graphical user interface (GUI) based on the attached “Software 1 GUI Mock-Up.” You may use JavaFX with or without FXML to create your GUI, or you may use Scene Builder to create your FXML file; use of Swing is not permitted. The user interface (UI) should closely match the organization of the GUI layout and contain all UI components (buttons, text fields, etc.) in each of the following GUI mock-up forms:
+**A.**  Create a JavaFX application with a graphical user interface (GUI) based on the attached “Software 1 GUI Mock-Up.” You may use JavaFX with or without FXML to create your GUI, or you may use Scene Builder to create your FXML file; use of Swing is not permitted. The user interface (UI) should closely match the organization of the GUI layout and contain all UI components (buttons, text fields, etc.) in each of the following GUI mock-up forms:
 
 1.  Main form
 
@@ -60,14 +30,14 @@ A.  Create a JavaFX application with a graphical user interface (GUI) based on t
 Note: You may use one FXML file for forms with an identical UI component structure. You may also use a single window that can be switched to a different menu, or a new window can be launched for each form. As of JDK 11, JavaFX is no longer included in the JDK API but is available as an SDK or module.
 
 
-B.  Provide Javadoc comments for each class member throughout the code, and include a detailed description of the following in your comments:
+**B.**  Provide Javadoc comments for each class member throughout the code, and include a detailed description of the following in your comments:
 • a logical or runtime error that you corrected in the code and how it was corrected
 • a future enhancement that would extend the functionality of the application if it were to be updated
 
 Note: For these comments to accurately export to the Javadoc comments, please add the logical and runtime error comments in the method header declaration comments where the error that was corrected occurred, and include the future enhancement comments in the comments of the main class. Please start these comments with “RUNTIME ERROR” or “FUTURE ENHANCEMENT” as applicable.
 
 
-II.  Application
+**II.  Application**
 
 C.  Create classes with data and logic that map to the UML class diagram and include the supplied Part class provided in the attached “Part.java.” Do not alter the provided class. Include all the classes and members as shown in the UML diagram. Your code should demonstrate the following:
 
@@ -80,9 +50,9 @@ C.  Create classes with data and logic that map to the UML class diagram and inc
 •   instance and static methods
 
 
-D.  Add the following functionalities to the Main form:
+**D.**  Add the following functionalities to the Main form:
 
-1.  The Parts pane
+**1.**  The Parts pane
 
 •   The Add button under the Parts TableView opens the Add Part form.
 
@@ -94,7 +64,7 @@ D.  Add the following functionalities to the Main form:
 
 •   If the search field is set to empty, the table should be repopulated with all available parts.
 
-2.  The Products pane
+**2.**  The Products pane
 
 •   The Add button under the Products TableView opens the Add Product form.
 
@@ -109,13 +79,13 @@ D.  Add the following functionalities to the Main form:
 Note: A product’s associated parts can exist independent of current inventory of parts. You are not required to display sample data upon launching your application. You do not need to save your data to a database or a file; data for this application is nonpersistent and will reside in computer memory while in use.
 
 
-3.  Exit button
+**3.**  Exit button
 • The Exit button closes the application.
 
 
-E.  Add the listed functionalities to the following parts forms:
+**E.**  Add the listed functionalities to the following parts forms:
 
-1.  The Add Part form
+**1.**  The Add Part form
 • The In-House and Outsourced radio buttons switch the bottom label to the correct value (Machine ID or Company Name).
 •   The application auto-generates a unique part ID. The part IDs can be, but do not need to be, contiguous.
 
@@ -127,7 +97,7 @@ E.  Add the listed functionalities to the following parts forms:
 
 •   Canceling or exiting this form redirects users to the Main form.
 
-2.  The Modify Part form
+**2.**  The Modify Part form
 • The text fields populate with the data from the chosen part.
 • The In-House and Outsourced radio buttons switch the bottom label to the correct value (Machine ID or Company Name) and swap In-House parts and Outsourced parts. When new objects need to be created after the Save button is clicked, the part ID should be retained.
 • The user can modify data values in the text fields sent from the Main form except the part ID.
@@ -135,9 +105,9 @@ E.  Add the listed functionalities to the following parts forms:
 • Canceling or exiting this form redirects users to the Main form.
 
 
-F.  Add the following functionalities to the following product forms:
+**F.**  Add the following functionalities to the following product forms:
 
-1.  The Add Product form
+**1.**  The Add Product form
 
 •   The application auto-generates a unique product ID. The product IDs can be, but do not need to be, contiguous.
 
@@ -162,7 +132,7 @@ F.  Add the following functionalities to the following product forms:
 Note: When a product is deleted, so can its associated parts without affecting the part inventory. The Remove Associated Part button removes a selected part from the bottom table. (This dissociates or removes a part from a product.)
 
 
-2.  The Modify Product form
+**2.**  The Modify Product form
 
 •   The text fields populate with the data from the chosen product, and the bottom TableView populates with the associated parts.
 
@@ -189,7 +159,7 @@ Note: When a product is deleted, so can its associated parts without affecting t
 Note: The Remove Associated Part button removes a selected part from the bottom table. (This dissociates or removes a part from a product.)
 
 
-G.  Write code to implement input validation and logical error checks using a dialog box or message in the UI displaying a descriptive error message for each of the following circumstances:
+**G.**  Write code to implement input validation and logical error checks using a dialog box or message in the UI displaying a descriptive error message for each of the following circumstances:
 
 •   Min should be less than Max; and Inv should be between those two values.
 
@@ -200,7 +170,7 @@ G.  Write code to implement input validation and logical error checks using a di
 •   The application will not crash when inappropriate user data is entered in the forms; instead, error messages should be generated.
 
 
-H.  Provide a folder containing Javadoc files that were generated from the IDE or via the command prompt from part B. In a comment above the main method header declaration, please specify where this folder is located.
+**H.**  Provide a folder containing Javadoc files that were generated from the IDE or via the command prompt from part B. In a comment above the main method header declaration, please specify where this folder is located.
 
 
-I.  Demonstrate professional communication in the content and presentation of your submission.
+**I.**  Demonstrate professional communication in the content and presentation of your submission.
