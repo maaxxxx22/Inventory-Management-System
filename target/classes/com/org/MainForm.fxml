@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.org.MainForm">
+  <children>
+      <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="624.0" prefWidth="1001.0">
+          <children>
+              <Pane layoutY="37.0" prefHeight="174.0" prefWidth="428.0">
+                  <children>
+                      <TextField fx:id="partSearch" layoutX="251.0" layoutY="97.0" onKeyTyped="#onSearch" prefHeight="25.0" prefWidth="194.0" promptText="Search by Part ID or Name" />
+                      <Label layoutX="45.0" layoutY="102.0" text="Parts" />
+                  </children>
+              </Pane>
+              <Pane layoutX="-1.0" layoutY="289.0" prefHeight="170.0" prefWidth="431.0">
+                  <children>
+                      <Button fx:id="partAdd" layoutX="278.0" layoutY="74.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+                      <Button fx:id="partModify" layoutX="349.0" layoutY="74.0" mnemonicParsing="false" onAction="#onModify" text="Modify" />
+                  </children>
+              </Pane>
+              <Button fx:id="exit" layoutX="891.0" layoutY="479.0" mnemonicParsing="false" onAction="#onExit" text="Exit" />
+              <TextField fx:id="prodSearch" layoutX="778.0" layoutY="134.0" onAction="#onProdSearch" onKeyTyped="#onProdSearch" prefHeight="25.0" prefWidth="194.0" promptText="Search by Product ID or Name" />
+              <TableView fx:id="prodTableview" fixedCellSize="0.0" layoutX="521.0" layoutY="168.0" prefHeight="182.0" prefWidth="468.0">
+                  <columns>
+                      <TableColumn fx:id="prodID" prefWidth="70.0" text="Product ID">
+                          <cellValueFactory><PropertyValueFactory property="id" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="prodName" prefWidth="96.0" text="Product Name">
+                          <cellValueFactory><PropertyValueFactory property="name" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="prodInventory" prefWidth="95.0" text="Inventory Level">
+                          <cellValueFactory><PropertyValueFactory property="price" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="prodPrice" prefWidth="171.0" text="Price / Cost per Unit">
+                          <cellValueFactory><PropertyValueFactory property="stock" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+              </TableView>
+              <TableView fx:id="partTableview" editable="true" fixedCellSize="0.0" layoutX="18.0" layoutY="169.0" prefHeight="183.0" prefWidth="469.0">
+                  <columns>
+                      <TableColumn fx:id="partID" prefWidth="72.0" text="Part ID">
+                          <cellValueFactory><PropertyValueFactory property="id" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="partName" prefWidth="75.0" text="Part Name">
+                          <cellValueFactory><PropertyValueFactory property="name" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="inventoryLevel" prefWidth="98.0" text="Inventory Level">
+                          <cellValueFactory><PropertyValueFactory property="stock" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="price" prefWidth="212.0" text="Price / Cost per Unit">
+                          <cellValueFactory><PropertyValueFactory property="price" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+                  <opaqueInsets>
+                      <Insets />
+                  </opaqueInsets>
+              </TableView>
+              <Label layoutX="46.0" layoutY="29.0" text="Inventory Management System" textFill="TRANSPARENT">
+                  <font>
+                      <Font size="30.0" />
+                  </font>
+              </Label>
+              <Label layoutX="25.0" layoutY="48.0" text="Inventory Management System">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+              </Label>
+              <Label layoutX="553.0" layoutY="139.0" text="Products" />
+              <Button fx:id="partDelete" layoutX="418.0" layoutY="363.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+              <Button fx:id="prodAdd" layoutX="778.0" layoutY="363.0" mnemonicParsing="false" onAction="#onProdAdd" text="Add" />
+              <Button fx:id="prodModify" layoutX="848.0" layoutY="363.0" mnemonicParsing="false" onAction="#onProdModify" text="Modify" />
+              <Button fx:id="prodDelete" layoutX="918.0" layoutY="363.0" mnemonicParsing="false" onAction="#onProdDelete" text="Delete" />
+          </children>
+      </AnchorPane>
+  </children>
+</VBox>

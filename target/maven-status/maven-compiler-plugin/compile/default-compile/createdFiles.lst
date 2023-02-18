@@ -1,0 +1,12 @@
+com\org\PartDTO.class
+com\org\AddProductForm.class
+com\org\Inventory.class
+com\org\AddPartForm.class
+com\org\ProductDT0.class
+module-info.class
+com\org\MainForm.class
+com\org\MainApplication.class
+com\org\ModifyPartForm.class
+com\org\ModifyProductForm.class
+com\org\OutSourcedPartDTO.class
+com\org\InHousePartDTO.class
